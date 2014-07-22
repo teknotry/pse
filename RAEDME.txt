@@ -1,0 +1,40 @@
+Type the  following command to obtain the executable files.
+
+
+$gcc -oserver1 server1.c retrive.c -lpthread -lmyodbc5 -w
+
+$gcc -oclient client.c -w
+
+$gcc -oserver2 server2.c retrive.c -lpthread -lmyodbc5 -w
+
+open mysql in both the server system and type the following command.
+
+$ su
+
+$/etc/init.d/mysqld start
+
+$ set the ip address of the server1 system as 192.168.5.150
+
+$/sbin/ifconfig eth0 192.168.5.150
+
+$ set the ip address of the server2 system as 192.168.5.150
+
+$/sbin/ifconfig eth0 192.168.5.155
+
+-----------------------------------
+HOW TO RUN THE PROGRAMME:
+-----------------
+	1. copy the pse directory to linux Desktop
+	2. Set the working directory path as "/Desktop/pse-server-main" using the following command ( for all system)
+		$ export PATH=$PATH:/home/<user name>/Desktop/pse-server-main
+	3. Run the program "server1" using the following command ( in server1 system)
+		$ server1 start
+		(Give the ip address of server2)
+	4. To stop the "server" type the follwing command ( in server2 system)
+		$ server1 stop 
+		
+	5. Run the client program in different system using following command
+		$ client
+
+---------------------
+For any other query please contact: 986193732,9439200836
