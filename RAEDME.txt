@@ -1,3 +1,8 @@
+
+Configuration steps:
+
+
+
 Type the  following command to obtain the executable files.
 
 
